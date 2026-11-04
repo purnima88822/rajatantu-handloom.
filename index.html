@@ -1,1 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAJATANTU | Woven in Heritage</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#160b0e;color:#f8edda;font-family:Georgia,serif}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #9b7444;position:sticky;top:0;background:#160b0ef5;z-index:10}
+.logo{font-size:27px;letter-spacing:4px;color:#e5bd7b}
+nav a{color:#f8edda;text-decoration:none;margin-left:18px;font-size:12px}
+.hero{padding:90px 8%;min-height:430px;background:linear-gradient(90deg,#160b0e,#160b0edb,#160b0e88),url('images/hero.jpg') center/cover;display:flex;align-items:center}
+.hero-content{max-width:570px}
+.eyebrow{color:#d8ad70;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(45px,8vw,78px);margin:20px 0;line-height:1.08}
+h1 span{color:#d8ad70;font-style:italic}
+.hero p{line-height:1.8;color:#dfd0bd}
+.btn{display:inline-block;margin-top:24px;padding:14px 24px;background:#c49a60;color:#190d10;text-decoration:none;font-size:12px;letter-spacing:2px}
+.section{padding:65px 6%}
+.heading{text-align:center;margin-bottom:35px}
+.heading small{color:#d8ad70;letter-spacing:4px}
+.heading h2{font-size:36px;margin-top:12px}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filters button{background:transparent;border:1px solid #a77a45;color:#f8edda;padding:10px 18px;cursor:pointer}
+.filters button.active,.filters button:hover{background:#c49a60;color:#160b0e}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.product{background:#241316;border:1px solid #68482f;overflow:hidden;transition:.3s}
+.product:hover{transform:translateY(-5px);border-color:#d8ad70}
+.product img{width:100%;height:260px;object-fit:cover;display:block;background:#382328}
+.info{padding:16px}
+.info small{color:#d8ad70;text-transform:uppercase;letter-spacing:2px;font-size:10px}
+.info h3{font-size:18px;margin:9px 0}
+.price{color:#e9c48b;font-size:19px}
+.info p{font-family:Arial,sans-serif;font-size:12px;color:#cbbba9;line-height:1.6;margin:9px 0}
+.enquire{display:block;text-align:center;background:#c49a60;color:#160b0e;padding:11px 8px;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;margin-top:13px}
+.enquire:hover{background:#efd3a0}
+.story{text-align:center;background:#241316}
+.story p{max-width:680px;margin:20px auto;color:#d8c9b8;line-height:1.9}
+footer{text-align:center;padding:35px 15px;border-top:1px solid #76512f;color:#cbbba9}
+.hidden{display:none}
+@media(max-width:950px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){
+header{flex-direction:column;gap:15px}
+nav a{margin:0 7px;font-size:10px}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.product img{height:210px}
+.info{padding:11px}
+.info h3{font-size:15px}
+.info p{font-size:11px}
+.section{padding:50px 4%}
+.hero{padding:65px 7%}
+.heading h2{font-size:30px}
+}
+@media(max-width:370px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">RAJATANTU</div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#collections">COLLECTIONS</a>
+<a href="#story">OUR STORY</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">THE ART OF SAMBALPURI WEAVING</div>
+<h1>Woven in <span>Heritage.</span></h1>
+<p>Discover the timeless beauty of Indian handloom. Every thread carries a story, every weave celebrates tradition.</p>
+<a class="btn" href="#collections">EXPLORE COLLECTIONS</a>
+</div>
+</section>
+
+<section class="section" id="collections">
+<div class="heading">
+<small>THE SIGNATURE EDIT</small>
+<h2>Our Collections</h2>
+</div>
+<div class="filters">
+<button class="active" onclick="filterProducts('all',this)">All Products</button>
+<button onclick="filterProducts('saree',this)">Sarees</button>
+<button onclick="filterProducts('kurti',this)">Kurtis</button>
+<button onclick="filterProducts('dress',this)">Dresses</button>
+</div>
+
+<div class="grid" id="productGrid">
+
+<div class="product" data-category="saree"><img src="images/product-01.jpg" alt="Saree 1"><div class="info"><small>Saree</small><h3>Crimson Heritage Saree</h3><div class="price">₹2,499</div><p>Traditional inspired handloom elegance.</p><a class="enquire" href="#" onclick="enquire('Crimson Heritage Saree','2499');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-02.jpg" alt="Saree 2"><div class="info"><small>Saree</small><h3>Royal Indigo Saree</h3><div class="price">₹3,199</div><p>Rich colours with timeless character.</p><a class="enquire" href="#" onclick="enquire('Royal Indigo Saree','3199');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-03.jpg" alt="Kurti 1"><div class="info"><small>Kurti</small><h3>Midnight Bloom Kurti</h3><div class="price">₹1,299</div><p>Graceful everyday ethnic styling.</p><a class="enquire" href="#" onclick="enquire('Midnight Bloom Kurti','1299');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-04.jpg" alt="Dress 1"><div class="info"><small>Dress</small><h3>Heritage Anarkali</h3><div class="price">₹1,899</div><p>Traditional charm for special moments.</p><a class="enquire" href="#" onclick="enquire('Heritage Anarkali','1899');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-05.jpg" alt="Saree 5"><div class="info"><small>Saree</small><h3>Golden Temple Saree</h3><div class="price">₹3,499</div><p>Inspired by classic Indian motifs.</p><a class="enquire" href="#" onclick="enquire('Golden Temple Saree','3499');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-06.jpg" alt="Kurti 2"><div class="info"><small>Kurti</small><h3>Rosewood Kurti Set</h3><div class="price">₹1,599</div><p>A beautiful ethnic wardrobe essential.</p><a class="enquire" href="#" onclick="enquire('Rosewood Kurti Set','1599');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-07.jpg" alt="Saree 7"><div class="info"><small>Saree</small><h3>Ivory Gold Saree</h3><div class="price">₹2,899</div><p>Understated festive sophistication.</p><a class="enquire" href="#" onclick="enquire('Ivory Gold Saree','2899');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-08.jpg" alt="Dress 2"><div class="info"><small>Dress</small><h3>Emerald Heritage Dress</h3><div class="price">₹2,199</div><p>Elegant colours and traditional spirit.</p><a class="enquire" href="#" onclick="enquire('Emerald Heritage Dress','2199');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-09.jpg" alt="Kurti 3"><div class="info"><small>Kurti</small><h3>Mustard Motif Kurti</h3><div class="price">₹1,199</div><p>Artful prints with a modern silhouette.</p><a class="enquire" href="#" onclick="enquire('Mustard Motif Kurti','1199');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-10.jpg" alt="Saree 10"><div class="info"><small>Saree</small><h3>Classic Maroon Saree</h3><div class="price">₹2,799</div><p>A rich and timeless statement.</p><a class="enquire" href="#" onclick="enquire('Classic Maroon Saree','2799');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-11.jpg" alt="Kurti 4"><div class="info"><small>Kurti</small><h3>Indigo Garden Kurti</h3><div class="price">₹1,399</div><p>Inspired by the beauty of handloom.</p><a class="enquire" href="#" onclick="enquire('Indigo Garden Kurti','1399');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-12.jpg" alt="Dress 12"><div class="info"><small>Dress</small><h3>Royal Festive Dress</h3><div class="price">₹2,499</div><p>Designed for memorable celebrations.</p><a class="enquire" href="#" onclick="enquire('Royal Festive Dress','2499');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-13.jpg" alt="Saree 13"><div class="info"><small>Saree</small><h3>Sunset Ikat Saree</h3><div class="price">₹3,299</div><p>Bold patterns and beautiful colours.</p><a class="enquire" href="#" onclick="enquire('Sunset Ikat Saree','3299');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-14.jpg" alt="Kurti 14"><div class="info"><small>Kurti</small><h3>Ivory Elegance Kurti</h3><div class="price">₹1,499</div><p>Soft and graceful ethnic style.</p><a class="enquire" href="#" onclick="enquire('Ivory Elegance Kurti','1499');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-15.jpg" alt="Saree 15"><div class="info"><small>Saree</small><h3>Royal Peacock Saree</h3><div class="price">₹3,799</div><p>A statement piece for special occasions.</p><a class="enquire" href="#" onclick="enquire('Royal Peacock Saree','3799');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-16.jpg" alt="Dress 16"><div class="info"><small>Dress</small><h3>Rose Celebration Dress</h3><div class="price">₹2,299</div><p>Festive elegance with a modern touch.</p><a class="enquire" href="#" onclick="enquire('Rose Celebration Dress','2299');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-17.jpg" alt="Kurti 17"><div class="info"><small>Kurti</small><h3>Crimson Classic Kurti</h3><div class="price">₹1,299</div><p>Rich colour for effortless elegance.</p><a class="enquire" href="#" onclick="enquire('Crimson Classic Kurti','1299');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-18.jpg" alt="Saree 18"><div class="info"><small>Saree</small><h3>Midnight Silk Saree</h3><div class="price">₹4,299</div><p>Luxury-inspired evening elegance.</p><a class="enquire" href="#" onclick="enquire('Midnight Silk Saree','4299');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-19.jpg" alt="Dress 19"><div class="info"><small>Dress</small><h3>Golden Bloom Dress</h3><div class="price">₹2,199</div><p>Inspired by traditional floral artistry.</p><a class="enquire" href="#" onclick="enquire('Golden Bloom Dress','2199');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-20.jpg" alt="Kurti 20"><div class="info"><small>Kurti</small><h3>Heritage Cotton Kurti</h3><div class="price">₹999</div><p>Comfortable everyday ethnic wear.</p><a class="enquire" href="#" onclick="enquire('Heritage Cotton Kurti','999');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-21.jpg" alt="Saree 21"><div class="info"><small>Saree</small><h3>Ruby Tradition Saree</h3><div class="price">₹3,599</div><p>A graceful traditional favourite.</p><a class="enquire" href="#" onclick="enquire('Ruby Tradition Saree','3599');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="kurti"><img src="images/product-22.jpg" alt="Kurti 22"><div class="info"><small>Kurti</small><h3>Blue Blossom Kurti</h3><div class="price">₹1,399</div><p>Colourful everyday sophistication.</p><a class="enquire" href="#" onclick="enquire('Blue Blossom Kurti','1399');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="dress"><img src="images/product-23.jpg" alt="Dress 23"><div class="info"><small>Dress</small><h3>Royal Marigold Dress</h3><div class="price">₹2,599</div><p>Festive beauty inspired by heritage.</p><a class="enquire" href="#" onclick="enquire('Royal Marigold Dress','2599');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+<div class="product" data-category="saree"><img src="images/product-24.jpg" alt="Saree 24"><div class="info"><small>Saree</small><h3>Antique Gold Saree</h3><div class="price">₹4,499</div><p>Timeless elegance for grand occasions.</p><a class="enquire" href="#" onclick="enquire('Antique Gold Saree','4499');return false">ENQUIRE ON WHATSAPP</a></div></div>
+
+</div>
+</section>
+
+<section class="section story" id="story">
+<div class="heading"><small>OUR PHILOSOPHY</small><h2>Stories in Every Thread</h2></div>
+<p>RAJATANTU is a fictional website demonstration celebrating Sambalpuri-inspired handloom, Indian craftsmanship and timeless elegance.</p>
+</section>
+
+<footer>
+<div class="logo">RAJATANTU</div>
+<p style="margin-top:12px">Woven in Heritage</p>
+<p style="margin-top:8px;font-size:11px">Website demonstration · Sample products and prices</p>
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+function enquire(name,price){
+if(WHATSAPP_NUMBER.includes("X")){
+alert("The shop WhatsApp number has not been added yet. We will set it up later.");
+return;
+}
+const message="Hello! I am interested in "+name+" priced at ₹"+price+". Please share availability and details.";
+window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+}
+function filterProducts(category,button){
+document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+document.querySelectorAll(".product").forEach(product=>{
+product.classList.toggle("hidden",category!=="all"&&product.dataset.category!==category);
+});
+}
+</script>
+</body>
+</html>
 # rajatantu-handloom.

@@ -8,10 +8,8 @@
 <style>
 :root {
   --wine: #40151f;
-  --wine2: #642638;
   --gold: #c49a55;
   --cream: #fbf6ee;
-  --ink: #2d2020;
 }
 
 * { box-sizing: border-box; }
@@ -19,7 +17,7 @@
 body {
   margin: 0;
   background: var(--cream);
-  color: var(--ink);
+  color: #2d2020;
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -145,7 +143,14 @@ nav a {
   font-weight: normal;
   text-align: center;
   color: var(--wine);
-  margin: 12px 4px 5px;
+  margin: 12px 4px 7px;
+}
+
+.price {
+  font: bold 14px Arial, sans-serif;
+  text-align: center;
+  color: #9a7137;
+  margin: 8px 0;
 }
 
 .card p {
@@ -199,8 +204,7 @@ footer {
 </nav>
 
 <section class="hero" id="home">
-  <img src="rajatantu-banner.jpg"
-       alt="Rajatantu handloom collection banner">
+  <img src="rajatantu-banner.jpg" alt="Rajatantu handloom banner">
 </section>
 
 <section class="intro">
@@ -281,13 +285,15 @@ const products = [
   ...dresses.map((file, i) => ({
     file,
     category: "dress",
-    title: `Traditional Dress ${String(i + 1).padStart(2, "0")}`
+    title: `Traditional Dress ${String(i + 1).padStart(2, "0")}`,
+    price: "₹2,999 – ₹4,999"
   })),
 
   ...sarees.map((file, i) => ({
     file,
     category: "saree",
-    title: `Handloom Saree ${String(i + 1).padStart(2, "0")}`
+    title: `Handloom Saree ${String(i + 1).padStart(2, "0")}`,
+    price: "₹8,999 – ₹29,999"
   }))
 ];
 
@@ -316,13 +322,17 @@ function showProducts(filter = "all") {
       const title = document.createElement("h3");
       title.textContent = product.title;
 
+      const price = document.createElement("div");
+      price.className = "price";
+      price.textContent = product.price;
+
       const label = document.createElement("p");
       label.textContent =
         product.category === "dress"
           ? "DRESS COLLECTION"
           : "SAREE COLLECTION";
 
-      card.append(img, title, label);
+      card.append(img, title, price, label);
       container.append(card);
     });
 }

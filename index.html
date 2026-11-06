@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>RAJATANTU | Woven in Heritage</title>
-<meta name="description" content="Discover premium Sambalpuri handloom sarees and elegant traditional dresses at RAJATANTU.">
+<meta name="description" content="Discover Sambalpuri handloom sarees and traditional clothing at RAJATANTU.">
 
 <style>
 :root {
@@ -14,7 +13,6 @@
   --gold: #c6a15b;
   --ivory: #f8f3e9;
   --ink: #281c1c;
-  --white: #ffffff;
 }
 
 * {
@@ -23,9 +21,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: Georgia, serif;
@@ -33,17 +29,16 @@ body {
   color: var(--ink);
 }
 
-/* HEADER */
 header {
   background: var(--deep);
   color: white;
   text-align: center;
-  padding: 27px 15px 22px;
+  padding: 25px 15px 20px;
   border-bottom: 2px solid var(--gold);
 }
 
 .logo {
-  font-size: 36px;
+  font-size: clamp(27px, 5vw, 38px);
   letter-spacing: 7px;
   color: var(--gold);
 }
@@ -51,16 +46,15 @@ header {
 .tagline {
   font-size: 11px;
   letter-spacing: 4px;
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
-/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
-  padding: 16px;
+  padding: 15px;
   background: var(--maroon);
 }
 
@@ -69,65 +63,32 @@ nav a {
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 1.5px;
-  transition: color .3s;
 }
 
-nav a:hover {
-  color: var(--gold);
-}
+nav a:hover { color: var(--gold); }
 
-/* HERO */
+/* MAIN BANNER */
 .hero {
-  min-height: 440px;
-  background:
-    linear-gradient(#21081199, #21081199),
-    url("product-01.jpg") center/cover;
+  width: 100%;
+  background: #2b0a13;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 35px 20px;
+  align-items: center;
+  overflow: hidden;
 }
 
-.hero-content {
-  max-width: 750px;
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.hero h1 {
-  font-size: clamp(36px, 7vw, 68px);
-  color: #f0d59a;
-  letter-spacing: 3px;
-  line-height: 1.15;
-}
-
-.hero p {
-  font-size: 16px;
-  margin: 22px auto;
-  max-width: 600px;
-  line-height: 1.9;
-}
-
-.gold-button {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--deep);
-  padding: 14px 28px;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 2px;
-  transition: .3s;
-}
-
-.gold-button:hover {
-  background: white;
-  transform: translateY(-3px);
-}
-
-/* INTRODUCTION */
 .intro {
   text-align: center;
-  padding: 65px 20px 30px;
+  padding: 60px 20px 28px;
 }
 
 .small-heading {
@@ -151,11 +112,10 @@ nav a:hover {
   font-size: 15px;
 }
 
-/* COLLECTION */
 .catalogue {
   max-width: 1300px;
   margin: auto;
-  padding: 25px 20px 75px;
+  padding: 25px 20px 70px;
 }
 
 .collection-title {
@@ -182,7 +142,6 @@ nav a:hover {
   font-family: Georgia, serif;
   font-size: 12px;
   letter-spacing: 1px;
-  transition: .3s;
 }
 
 .filters button.active,
@@ -191,36 +150,28 @@ nav a:hover {
   color: white;
 }
 
-/* PRODUCT GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
+  gap: 22px;
 }
 
 .product {
   background: white;
   overflow: hidden;
   box-shadow: 0 5px 22px #30101812;
-  transition: transform .3s, box-shadow .3s;
-}
-
-.product:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px #30101822;
 }
 
 .product-image {
   width: 100%;
-  height: 330px;
+  height: 320px;
   object-fit: cover;
+  object-position: center;
   display: block;
   background: #eee7dc;
 }
 
-.details {
-  padding: 19px 17px;
-}
+.details { padding: 17px; }
 
 .category {
   font-family: Arial, sans-serif;
@@ -262,18 +213,14 @@ nav a:hover {
   font-family: Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
-  transition: .3s;
 }
 
-.enquire:hover {
-  background: #754052;
-}
+.enquire:hover { background: #754052; }
 
-/* STORY */
 .story {
   background: #eee4d4;
   text-align: center;
-  padding: 65px 20px;
+  padding: 60px 20px;
 }
 
 .story h2 {
@@ -289,12 +236,11 @@ nav a:hover {
   color: #665454;
 }
 
-/* CONTACT */
 .contact {
   background: var(--maroon);
   color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 48px 20px;
 }
 
 .contact h2 {
@@ -320,7 +266,6 @@ nav a:hover {
   letter-spacing: 1px;
 }
 
-/* FOOTER */
 footer {
   background: var(--deep);
   color: #d8c9b2;
@@ -338,53 +283,35 @@ footer {
   line-height: 1.7;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+@media(max-width:1000px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
-@media (max-width: 700px) {
+@media(max-width:700px) {
+  nav { gap: 18px; }
+
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 13px;
   }
 
-  .product-image {
-    height: 245px;
-  }
-
-  .details {
-    padding: 13px 11px;
-  }
-
-  .details h3 {
-    font-size: 15px;
-  }
-
-  .price {
-    font-size: 16px;
-  }
-
-  .hero {
-    min-height: 340px;
-  }
+  .product-image { height: 245px; }
+  .details { padding: 13px 11px; }
+  .details h3 { font-size: 15px; }
+  .price { font-size: 16px; }
 
   .intro h2,
-  .story h2 {
-    font-size: 27px;
+  .story h2 { font-size: 27px; }
+
+  .hero img {
+    width: 100%;
+    max-height: none;
   }
 }
 
-@media (max-width: 370px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-image {
-    height: 300px;
-  }
+@media(max-width:370px) {
+  .grid { grid-template-columns: 1fr; }
+  .product-image { height: 300px; }
 }
 </style>
 </head>
@@ -403,16 +330,12 @@ footer {
   <a href="#contact">CONTACT</a>
 </nav>
 
+<!-- YOUR BANNER -->
 <section class="hero" id="home">
-  <div class="hero-content">
-    <p class="small-heading">THE ART OF INDIAN HANDLOOM</p>
-    <h1>Elegance Woven in Tradition</h1>
-    <p>
-      Discover the beauty of Indian textiles, timeless craftsmanship
-      and the heritage of Sambalpuri-inspired fashion.
-    </p>
-    <a class="gold-button" href="#collection">EXPLORE COLLECTION</a>
-  </div>
+  <img
+    src="rajatantu-banner.jpg"
+    alt="RAJATANTU Handloom — Sambalpuri sarees and handwoven heritage of Odisha"
+  >
 </section>
 
 <section class="intro">
@@ -440,8 +363,9 @@ footer {
 
   <p class="demo-note">
     Product names and prices are demonstration details.
-    Please confirm actual product availability and prices before publishing
-    this as a real shop catalogue.
+    Please confirm actual product availability and prices.
+    Missing product photos will show the RAJATANTU banner
+    until individual photos are uploaded.
   </p>
 
 </section>
@@ -450,10 +374,10 @@ footer {
   <div class="small-heading">OUR PHILOSOPHY</div>
   <h2>Heritage. Artistry. Elegance.</h2>
   <p>
-    RAJATANTU celebrates the beauty of Indian textiles and the
-    artistry behind every design. Our vision is to bring timeless
-    traditional style into the modern wardrobe while honouring
-    the rich textile heritage of India.
+    RAJATANTU celebrates the beauty of Indian textiles and
+    the artistry behind every design. Our vision is to bring
+    timeless traditional style into the modern wardrobe while
+    honouring the rich textile heritage of India.
   </p>
 </section>
 
@@ -461,47 +385,34 @@ footer {
   <h2>RAJATANTU</h2>
   <p>WOVEN IN HERITAGE</p>
   <p>Have a question about a product? Contact us through WhatsApp.</p>
-  <a id="contactButton" href="#" target="_blank" rel="noopener">
-    CONTACT US
-  </a>
+  <a id="contactButton" href="#">CONTACT US</a>
 </section>
 
 <footer>
-  © 2026 RAJATANTU. All rights reserved.
-  <br>
+  © 2026 RAJATANTU. All rights reserved.<br>
   WOVEN IN HERITAGE
 </footer>
 
 <script>
 
-// REPLACE WITH THE SHOP OWNER'S WHATSAPP NUMBER.
-// Format: 91 followed by the 10-digit mobile number.
-// Do not include +, spaces or dashes.
+// Replace this placeholder with the shop's real WhatsApp number.
+// Format: country code followed by the 10-digit number.
 const WHATSAPP_NUMBER = "91XXXXXXXXXX";
 
-// SAMPLE PRODUCT PRICES
 const sareePrices = [
-  8999, 9999, 10999, 11999, 12999,
-  13999, 14999, 15999, 8999, 9999,
-  10999, 11999, 12999, 13999, 14999,
-  15999, 16999, 17999, 18999, 19999,
-  8999, 10999, 12999, 14999, 15999,
-  16999, 17999, 18999, 19999, 24999
+  8999,9999,10999,11999,12999,13999,14999,15999,
+  8999,9999,10999,11999,12999,13999,14999,15999,
+  16999,17999,18999,19999,8999,10999,12999,14999,
+  15999,16999,17999,18999,19999,24999
 ];
 
 const dressPrices = [
-  6999, 7999, 8999, 9999, 10999,
-  11999, 6999, 7999, 8999, 9999,
-  10999, 11999, 12999, 7999, 8999,
-  9999, 10999, 11999, 12999, 13999,
-  14999, 15999, 16999
+  6999,7999,8999,9999,10999,11999,6999,7999,
+  8999,9999,10999,11999,12999,7999,8999,9999,
+  10999,11999,12999,13999,14999,15999,16999
 ];
 
 const products = [];
-
-// 01–30: SAREES
-// 31–53: DRESSES
-// 54–55: KURTIS
 
 for (let i = 1; i <= 55; i++) {
 
@@ -515,22 +426,29 @@ for (let i = 1; i <= 55; i++) {
     price = sareePrices[i - 1];
     name = "Sambalpuri Heritage Saree " +
       String(i).padStart(2, "0");
-    description = "A premium traditional saree. Enquire for design and availability.";
+    description =
+      "A premium traditional saree. Enquire for design and availability.";
 
   } else if (i <= 53) {
     category = "dress";
     price = dressPrices[i - 31];
     name = "Elegant Traditional Dress " +
       String(i).padStart(2, "0");
-    description = "An elegant traditional design. Enquire for details and availability.";
+    description =
+      "An elegant traditional design. Enquire for details and availability.";
 
   } else {
     category = "kurti";
     price = i === 54 ? 2999 : 3999;
     name = "Traditional Kurti " +
       String(i).padStart(2, "0");
-    description = "A beautiful traditional style. Enquire for details and availability.";
+    description =
+      "A beautiful traditional style. Enquire for details and availability.";
   }
+
+  const image = i === 1
+    ? "product-01.jpg"
+    : "images/product-" + String(i).padStart(2, "0") + ".jpg";
 
   products.push({
     number: i,
@@ -538,17 +456,10 @@ for (let i = 1; i <= 55; i++) {
     price: price,
     name: name,
     description: description,
-
-    // Product 01 is in the repository root.
-    // Products 02–55 should be uploaded into the images folder.
-    image: i === 1
-      ? "product-01.jpg"
-      : "images/product-" + String(i).padStart(2, "0") + ".jpg"
+    image: image
   });
-
 }
 
-// WHATSAPP MESSAGE
 function whatsappLink(product) {
 
   const message =
@@ -564,7 +475,6 @@ function whatsappLink(product) {
     encodeURIComponent(message);
 }
 
-// DISPLAY PRODUCTS
 const grid = document.getElementById("productGrid");
 
 function displayProducts(items) {
@@ -578,14 +488,12 @@ function displayProducts(items) {
         src="${product.image}"
         alt="${product.name}"
         loading="lazy"
-        onerror="this.alt='Product photo unavailable';"
+        onerror="this.onerror=null;this.src='rajatantu-banner.jpg';this.alt='RAJATANTU handloom banner';"
       >
 
       <div class="details">
 
-        <div class="category">
-          ${product.category}
-        </div>
+        <div class="category">${product.category}</div>
 
         <h3>${product.name}</h3>
 
@@ -614,7 +522,6 @@ function displayProducts(items) {
 
 }
 
-// CATEGORY FILTERS
 function filterProducts(category, button) {
 
   document.querySelectorAll(".filters button")
@@ -629,14 +536,12 @@ function filterProducts(category, button) {
   displayProducts(filtered);
 }
 
-// CONTACT BUTTON
 document.getElementById("contactButton").href =
   "https://wa.me/" + WHATSAPP_NUMBER;
 
-// SHOW ALL PRODUCTS
 displayProducts(products);
 
 </script>
 
 </body>
-  </html>
+</html>

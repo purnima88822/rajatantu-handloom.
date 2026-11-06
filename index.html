@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +34,6 @@ body {
 }
 
 /* HEADER */
-
 header {
   background: var(--deep);
   color: white;
@@ -57,7 +55,6 @@ header {
 }
 
 /* NAVIGATION */
-
 nav {
   display: flex;
   justify-content: center;
@@ -80,12 +77,11 @@ nav a:hover {
 }
 
 /* HERO */
-
 .hero {
   min-height: 440px;
   background:
     linear-gradient(#21081199, #21081199),
-    url("images/product-01.jpg") center/cover;
+    url("product-01.jpg") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +125,6 @@ nav a:hover {
 }
 
 /* INTRODUCTION */
-
 .intro {
   text-align: center;
   padding: 65px 20px 30px;
@@ -157,7 +152,6 @@ nav a:hover {
 }
 
 /* COLLECTION */
-
 .catalogue {
   max-width: 1300px;
   margin: auto;
@@ -198,7 +192,6 @@ nav a:hover {
 }
 
 /* PRODUCT GRID */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -277,7 +270,6 @@ nav a:hover {
 }
 
 /* STORY */
-
 .story {
   background: #eee4d4;
   text-align: center;
@@ -298,7 +290,6 @@ nav a:hover {
 }
 
 /* CONTACT */
-
 .contact {
   background: var(--maroon);
   color: white;
@@ -330,7 +321,6 @@ nav a:hover {
 }
 
 /* FOOTER */
-
 footer {
   background: var(--deep);
   color: #d8c9b2;
@@ -349,7 +339,6 @@ footer {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -485,15 +474,12 @@ footer {
 
 <script>
 
-// REPLACE THIS WITH THE SHOP OWNER'S WHATSAPP NUMBER.
+// REPLACE WITH THE SHOP OWNER'S WHATSAPP NUMBER.
 // Format: 91 followed by the 10-digit mobile number.
 // Do not include +, spaces or dashes.
 const WHATSAPP_NUMBER = "91XXXXXXXXXX";
 
-// PRODUCT PRICES
-// All 30 sarees are above ₹7,999.
-// These are sample demonstration prices.
-
+// SAMPLE PRODUCT PRICES
 const sareePrices = [
   8999, 9999, 10999, 11999, 12999,
   13999, 14999, 15999, 8999, 9999,
@@ -525,7 +511,6 @@ for (let i = 1; i <= 55; i++) {
   let description;
 
   if (i <= 30) {
-
     category = "saree";
     price = sareePrices[i - 1];
     name = "Sambalpuri Heritage Saree " +
@@ -533,7 +518,6 @@ for (let i = 1; i <= 55; i++) {
     description = "A premium traditional saree. Enquire for design and availability.";
 
   } else if (i <= 53) {
-
     category = "dress";
     price = dressPrices[i - 31];
     name = "Elegant Traditional Dress " +
@@ -541,13 +525,11 @@ for (let i = 1; i <= 55; i++) {
     description = "An elegant traditional design. Enquire for details and availability.";
 
   } else {
-
     category = "kurti";
     price = i === 54 ? 2999 : 3999;
     name = "Traditional Kurti " +
       String(i).padStart(2, "0");
     description = "A beautiful traditional style. Enquire for details and availability.";
-
   }
 
   products.push({
@@ -556,14 +538,17 @@ for (let i = 1; i <= 55; i++) {
     price: price,
     name: name,
     description: description,
-    image: "images/product-" +
-      String(i).padStart(2, "0") + ".jpg"
+
+    // Product 01 is in the repository root.
+    // Products 02–55 should be uploaded into the images folder.
+    image: i === 1
+      ? "product-01.jpg"
+      : "images/product-" + String(i).padStart(2, "0") + ".jpg"
   });
 
 }
 
 // WHATSAPP MESSAGE
-
 function whatsappLink(product) {
 
   const message =
@@ -577,11 +562,9 @@ function whatsappLink(product) {
     WHATSAPP_NUMBER +
     "?text=" +
     encodeURIComponent(message);
-
 }
 
 // DISPLAY PRODUCTS
-
 const grid = document.getElementById("productGrid");
 
 function displayProducts(items) {
@@ -632,7 +615,6 @@ function displayProducts(items) {
 }
 
 // CATEGORY FILTERS
-
 function filterProducts(category, button) {
 
   document.querySelectorAll(".filters button")
@@ -645,19 +627,16 @@ function filterProducts(category, button) {
     : products.filter(product => product.category === category);
 
   displayProducts(filtered);
-
 }
 
 // CONTACT BUTTON
-
 document.getElementById("contactButton").href =
   "https://wa.me/" + WHATSAPP_NUMBER;
 
-// SHOW ALL PRODUCTS WHEN WEBSITE OPENS
-
+// SHOW ALL PRODUCTS
 displayProducts(products);
 
 </script>
 
 </body>
-</html>
+  </html>

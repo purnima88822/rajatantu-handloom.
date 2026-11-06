@@ -4,125 +4,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAJATANTU | Woven in Heritage</title>
-<meta name="description" content="Discover Sambalpuri handloom sarees and traditional clothing at RAJATANTU.">
 
 <style>
 :root {
-  --maroon: #42101d;
-  --deep: #260911;
-  --gold: #c6a15b;
-  --ivory: #f8f3e9;
-  --ink: #281c1c;
+  --wine: #40151f;
+  --wine2: #642638;
+  --gold: #c49a55;
+  --cream: #fbf6ee;
+  --ink: #2d2020;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html { scroll-behavior: smooth; }
+* { box-sizing: border-box; }
 
 body {
-  font-family: Georgia, serif;
-  background: var(--ivory);
+  margin: 0;
+  background: var(--cream);
   color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 header {
-  background: var(--deep);
+  background: var(--wine);
   color: white;
   text-align: center;
   padding: 25px 15px 20px;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
 }
 
-.logo {
-  font-size: clamp(27px, 5vw, 38px);
-  letter-spacing: 7px;
-  color: var(--gold);
+.brand {
+  font-size: clamp(30px, 7vw, 52px);
+  letter-spacing: 5px;
+  margin: 0;
 }
 
-.tagline {
-  font-size: 11px;
+.tag {
+  font: 11px Arial, sans-serif;
   letter-spacing: 4px;
+  color: #e4c995;
   margin-top: 8px;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 28px;
+  gap: 24px;
   flex-wrap: wrap;
-  padding: 15px;
-  background: var(--maroon);
+  padding: 14px;
+  background: #fffaf3;
+  font: 12px Arial, sans-serif;
+  letter-spacing: 2px;
 }
 
 nav a {
-  color: white;
+  color: var(--wine);
   text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 1.5px;
 }
 
-nav a:hover { color: var(--gold); }
-
-/* MAIN BANNER */
 .hero {
-  width: 100%;
-  background: #2b0a13;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  max-width: 1200px;
+  margin: 22px auto;
+  padding: 0 16px;
 }
 
 .hero img {
-  display: block;
   width: 100%;
-  height: auto;
-  max-height: 620px;
-  object-fit: contain;
-  object-position: center;
+  max-height: 440px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #d9c49f;
 }
 
 .intro {
   text-align: center;
-  padding: 60px 20px 28px;
+  padding: 20px 16px 12px;
 }
 
-.small-heading {
-  color: #9a7742;
-  font-size: 11px;
-  letter-spacing: 4px;
-  margin-bottom: 14px;
-}
-
-.intro h2 {
-  font-size: 34px;
-  color: var(--maroon);
-  margin-bottom: 15px;
+.intro h1 {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: normal;
+  color: var(--wine);
+  margin: 0 0 9px;
 }
 
 .intro p {
-  max-width: 680px;
+  font: 14px/1.7 Arial, sans-serif;
+  color: #6d5a50;
+  max-width: 650px;
   margin: auto;
-  line-height: 1.9;
-  color: #665454;
-  font-size: 15px;
-}
-
-.catalogue {
-  max-width: 1300px;
-  margin: auto;
-  padding: 25px 20px 70px;
-}
-
-.collection-title {
-  text-align: center;
-  color: var(--maroon);
-  font-size: 29px;
-  margin: 20px 0;
 }
 
 .filters {
@@ -130,188 +98,89 @@ nav a:hover { color: var(--gold); }
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 25px 0 38px;
+  padding: 18px;
 }
 
 .filters button {
   border: 1px solid var(--gold);
   background: transparent;
-  color: var(--maroon);
-  padding: 11px 23px;
-  cursor: pointer;
-  font-family: Georgia, serif;
-  font-size: 12px;
+  color: var(--wine);
+  padding: 11px 20px;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .filters button.active,
 .filters button:hover {
-  background: var(--maroon);
+  background: var(--wine);
   color: white;
 }
 
 .grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 16px 50px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 18px;
 }
 
-.product {
+.card {
   background: white;
-  overflow: hidden;
-  box-shadow: 0 5px 22px #30101812;
+  border: 1px solid #eadfce;
+  padding: 9px;
+  box-shadow: 0 4px 14px #4a25300d;
 }
 
-.product-image {
+.card img {
   width: 100%;
-  height: 320px;
+  height: 280px;
   object-fit: cover;
-  object-position: center;
   display: block;
-  background: #eee7dc;
+  background: #eee;
 }
 
-.details { padding: 17px; }
-
-.category {
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #98733b;
-  text-transform: uppercase;
-}
-
-.details h3 {
-  font-size: 17px;
-  color: var(--maroon);
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-.description {
-  font-size: 12px;
-  line-height: 1.7;
-  color: #766969;
-  min-height: 40px;
-}
-
-.price {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 14px 0;
-  color: var(--deep);
-}
-
-.enquire {
-  display: block;
+.card h3 {
+  font-size: 16px;
+  font-weight: normal;
   text-align: center;
-  background: var(--maroon);
-  color: white;
-  text-decoration: none;
-  padding: 13px 8px;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
+  color: var(--wine);
+  margin: 12px 4px 5px;
+}
+
+.card p {
+  font: 11px Arial, sans-serif;
+  text-align: center;
   letter-spacing: 1px;
-}
-
-.enquire:hover { background: #754052; }
-
-.story {
-  background: #eee4d4;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.story h2 {
-  color: var(--maroon);
-  font-size: 32px;
-  margin-bottom: 18px;
-}
-
-.story p {
-  max-width: 730px;
-  margin: auto;
-  line-height: 2;
-  color: #665454;
-}
-
-.contact {
-  background: var(--maroon);
-  color: white;
-  text-align: center;
-  padding: 48px 20px;
-}
-
-.contact h2 {
-  color: var(--gold);
-  font-size: 30px;
-  letter-spacing: 5px;
-  margin-bottom: 12px;
-}
-
-.contact p {
-  line-height: 2;
-  font-size: 13px;
-}
-
-.contact a {
-  display: inline-block;
-  margin-top: 18px;
-  color: var(--deep);
-  background: var(--gold);
-  text-decoration: none;
-  padding: 12px 22px;
-  font-size: 12px;
-  letter-spacing: 1px;
+  color: #92734a;
+  margin: 0 0 8px;
 }
 
 footer {
-  background: var(--deep);
-  color: #d8c9b2;
+  background: var(--wine);
+  color: #f5e8d3;
   text-align: center;
-  padding: 22px;
-  font: 11px Arial, sans-serif;
-  line-height: 1.8;
+  padding: 25px 15px;
+  font: 12px/1.8 Arial, sans-serif;
+  letter-spacing: 1px;
 }
 
-.demo-note {
-  text-align: center;
-  font: 11px Arial, sans-serif;
-  color: #827575;
-  padding: 20px 15px;
-  line-height: 1.7;
+@media(max-width:850px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .card img { height: 250px; }
 }
 
-@media(max-width:1000px) {
-  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
-@media(max-width:700px) {
-  nav { gap: 18px; }
-
+@media(max-width:560px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 13px;
+    gap: 10px;
+    padding: 5px 10px 35px;
   }
-
-  .product-image { height: 245px; }
-  .details { padding: 13px 11px; }
-  .details h3 { font-size: 15px; }
-  .price { font-size: 16px; }
-
-  .intro h2,
-  .story h2 { font-size: 27px; }
-
-  .hero img {
-    width: 100%;
-    max-height: none;
-  }
-}
-
-@media(max-width:370px) {
-  .grid { grid-template-columns: 1fr; }
-  .product-image { height: 300px; }
+  .card { padding: 6px; }
+  .card img { height: 205px; }
+  .brand { letter-spacing: 3px; }
 }
 </style>
 </head>
@@ -319,227 +188,157 @@ footer {
 <body>
 
 <header>
-  <div class="logo">RAJATANTU</div>
-  <div class="tagline">WOVEN IN HERITAGE</div>
+  <h1 class="brand">RAJATANTU</h1>
+  <div class="tag">WOVEN IN HERITAGE</div>
 </header>
 
 <nav>
   <a href="#home">HOME</a>
   <a href="#collection">COLLECTION</a>
-  <a href="#story">OUR STORY</a>
   <a href="#contact">CONTACT</a>
 </nav>
 
-<!-- YOUR BANNER -->
 <section class="hero" id="home">
-  <img
-    src="rajatantu-banner.jpg"
-    alt="RAJATANTU Handloom — Sambalpuri sarees and handwoven heritage of Odisha"
-  >
+  <img src="rajatantu-banner.jpg"
+       alt="Rajatantu handloom collection banner">
 </section>
 
 <section class="intro">
-  <div class="small-heading">A CELEBRATION OF CRAFT</div>
-  <h2>The RAJATANTU Collection</h2>
+  <h1>Tradition, Woven Beautifully</h1>
   <p>
-    Where traditional artistry meets contemporary elegance.
-    Explore our curated collection of premium sarees and
-    beautiful traditional dresses.
+    Discover our handpicked collection of traditional dresses
+    and sarees, celebrating timeless craftsmanship and heritage.
   </p>
 </section>
 
-<section class="catalogue" id="collection">
+<div class="filters" id="collection">
+  <button class="active" data-filter="all">ALL (40)</button>
+  <button data-filter="dress">DRESSES (10)</button>
+  <button data-filter="saree">SAREES (30)</button>
+</div>
 
-  <h2 class="collection-title">Discover Our Collection</h2>
+<main class="grid" id="products"></main>
 
-  <div class="filters">
-    <button class="active" onclick="filterProducts('all',this)">ALL</button>
-    <button onclick="filterProducts('saree',this)">SAREES</button>
-    <button onclick="filterProducts('dress',this)">DRESSES</button>
-    <button onclick="filterProducts('kurti',this)">KURTIS</button>
-  </div>
-
-  <div class="grid" id="productGrid"></div>
-
-  <p class="demo-note">
-    Product names and prices are demonstration details.
-    Please confirm actual product availability and prices.
-    Missing product photos will show the RAJATANTU banner
-    until individual photos are uploaded.
-  </p>
-
-</section>
-
-<section class="story" id="story">
-  <div class="small-heading">OUR PHILOSOPHY</div>
-  <h2>Heritage. Artistry. Elegance.</h2>
-  <p>
-    RAJATANTU celebrates the beauty of Indian textiles and
-    the artistry behind every design. Our vision is to bring
-    timeless traditional style into the modern wardrobe while
-    honouring the rich textile heritage of India.
-  </p>
-</section>
-
-<section class="contact" id="contact">
-  <h2>RAJATANTU</h2>
-  <p>WOVEN IN HERITAGE</p>
-  <p>Have a question about a product? Contact us through WhatsApp.</p>
-  <a id="contactButton" href="#">CONTACT US</a>
-</section>
-
-<footer>
-  © 2026 RAJATANTU. All rights reserved.<br>
-  WOVEN IN HERITAGE
+<footer id="contact">
+  RAJATANTU<br>
+  WOVEN IN HERITAGE<br>
+  For product enquiries, please contact the store.
 </footer>
 
 <script>
 
-// Replace this placeholder with the shop's real WhatsApp number.
-// Format: country code followed by the 10-digit number.
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+// FIRST 10 IMAGES: DRESSES
 
-const sareePrices = [
-  8999,9999,10999,11999,12999,13999,14999,15999,
-  8999,9999,10999,11999,12999,13999,14999,15999,
-  16999,17999,18999,19999,8999,10999,12999,14999,
-  15999,16999,17999,18999,19999,24999
+const dresses = [
+  "p01.jpg",
+  "p04.jpg",
+  "p05.jpg",
+  "p07.jpg",
+  "p08.jpg",
+  "Screenshot_2026-11-06-14-04-57-617_com.miui.gallery.jpg",
+  "Screenshot_2026-11-06-14-05-21-696_com.miui.gallery.jpg",
+  "Screenshot_2026-11-06-14-05-26-487_com.miui.gallery.jpg",
+  "Screenshot_2026-11-06-14-05-29-262_com.miui.gallery.jpg",
+  "product-01.jpg"
 ];
 
-const dressPrices = [
-  6999,7999,8999,9999,10999,11999,6999,7999,
-  8999,9999,10999,11999,12999,7999,8999,9999,
-  10999,11999,12999,13999,14999,15999,16999
+// NEXT 30 IMAGES: SAREES
+
+const sarees = [
+  "IMG-20261105-WA0029.jpg",
+  "IMG-20261105-WA0148.jpg",
+  "IMG-20261105-WA0458.jpg",
+  "IMG-20261105-WA0487.jpg",
+  "IMG-20261105-WA0551.jpg",
+  "IMG-20261105-WA0739.jpg",
+  "IMG-20261105-WA2681.jpg",
+  "IMG-20261105-WA2817.jpg",
+  "IMG-20261105-WA3026.jpg",
+  "IMG-20261105-WA3128.jpg",
+  "IMG-20261105-WA3432.jpg",
+  "IMG-20261105-WA3500.jpg",
+  "IMG-20261105-WA3520.jpg",
+  "IMG-20261105-WA3777.jpg",
+  "IMG-20261105-WA4160.jpg",
+  "IMG-20261105-WA4648.jpg",
+  "IMG-20261105-WA4983.jpg",
+  "IMG-20261105-WA5028.jpg",
+  "IMG-20261105-WA5175.jpg",
+  "IMG-20261105-WA5727.jpg",
+  "IMG-20261105-WA6376.jpg",
+  "IMG-20261105-WA6631.jpg",
+  "IMG-20261105-WA6847.jpg",
+  "IMG-20261105-WA6956.jpg",
+  "IMG-20261105-WA7507.jpg",
+  "IMG-20261105-WA7929.jpg",
+  "IMG-20261105-WA9095.jpg",
+  "IMG-20261105-WA9185.jpg",
+  "IMG-20261105-WA9934.jpg",
+  "IMG-20261105-WA9987.jpg"
 ];
 
-const products = [];
+const products = [
+  ...dresses.map((file, i) => ({
+    file,
+    category: "dress",
+    title: `Traditional Dress ${String(i + 1).padStart(2, "0")}`
+  })),
 
-for (let i = 1; i <= 55; i++) {
+  ...sarees.map((file, i) => ({
+    file,
+    category: "saree",
+    title: `Handloom Saree ${String(i + 1).padStart(2, "0")}`
+  }))
+];
 
-  let category;
-  let price;
-  let name;
-  let description;
+const container = document.getElementById("products");
 
-  if (i <= 30) {
-    category = "saree";
-    price = sareePrices[i - 1];
-    name = "Sambalpuri Heritage Saree " +
-      String(i).padStart(2, "0");
-    description =
-      "A premium traditional saree. Enquire for design and availability.";
+function showProducts(filter = "all") {
+  container.innerHTML = "";
 
-  } else if (i <= 53) {
-    category = "dress";
-    price = dressPrices[i - 31];
-    name = "Elegant Traditional Dress " +
-      String(i).padStart(2, "0");
-    description =
-      "An elegant traditional design. Enquire for details and availability.";
+  products
+    .filter(product =>
+      filter === "all" || product.category === filter
+    )
+    .forEach(product => {
 
-  } else {
-    category = "kurti";
-    price = i === 54 ? 2999 : 3999;
-    name = "Traditional Kurti " +
-      String(i).padStart(2, "0");
-    description =
-      "A beautiful traditional style. Enquire for details and availability.";
-  }
+      const card = document.createElement("article");
+      card.className = "card";
 
-  const image = i === 1
-    ? "product-01.jpg"
-    : "images/product-" + String(i).padStart(2, "0") + ".jpg";
+      const img = document.createElement("img");
+      img.src = product.file;
+      img.alt = product.title;
 
-  products.push({
-    number: i,
-    category: category,
-    price: price,
-    name: name,
-    description: description,
-    image: image
+      img.onerror = () => {
+        img.style.display = "none";
+      };
+
+      const title = document.createElement("h3");
+      title.textContent = product.title;
+
+      const label = document.createElement("p");
+      label.textContent =
+        product.category === "dress"
+          ? "DRESS COLLECTION"
+          : "SAREE COLLECTION";
+
+      card.append(img, title, label);
+      container.append(card);
+    });
+}
+
+document.querySelectorAll(".filters button").forEach(button => {
+  button.addEventListener("click", () => {
+
+    document.querySelectorAll(".filters button")
+      .forEach(item => item.classList.remove("active"));
+
+    button.classList.add("active");
+    showProducts(button.dataset.filter);
   });
-}
+});
 
-function whatsappLink(product) {
-
-  const message =
-    "Hello, I am interested in " +
-    product.name +
-    ". The demonstration listing shows ₹" +
-    product.price.toLocaleString("en-IN") +
-    ". Please share the actual price, details and availability.";
-
-  return "https://wa.me/" +
-    WHATSAPP_NUMBER +
-    "?text=" +
-    encodeURIComponent(message);
-}
-
-const grid = document.getElementById("productGrid");
-
-function displayProducts(items) {
-
-  grid.innerHTML = items.map(product => `
-
-    <article class="product">
-
-      <img
-        class="product-image"
-        src="${product.image}"
-        alt="${product.name}"
-        loading="lazy"
-        onerror="this.onerror=null;this.src='rajatantu-banner.jpg';this.alt='RAJATANTU handloom banner';"
-      >
-
-      <div class="details">
-
-        <div class="category">${product.category}</div>
-
-        <h3>${product.name}</h3>
-
-        <p class="description">
-          ${product.description}
-        </p>
-
-        <div class="price">
-          ₹${product.price.toLocaleString("en-IN")}
-        </div>
-
-        <a
-          class="enquire"
-          href="${whatsappLink(product)}"
-          target="_blank"
-          rel="noopener"
-        >
-          ENQUIRE ON WHATSAPP
-        </a>
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-}
-
-function filterProducts(category, button) {
-
-  document.querySelectorAll(".filters button")
-    .forEach(btn => btn.classList.remove("active"));
-
-  button.classList.add("active");
-
-  const filtered = category === "all"
-    ? products
-    : products.filter(product => product.category === category);
-
-  displayProducts(filtered);
-}
-
-document.getElementById("contactButton").href =
-  "https://wa.me/" + WHATSAPP_NUMBER;
-
-displayProducts(products);
+showProducts();
 
 </script>
 

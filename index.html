@@ -1,18 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RAJATANTU | Woven in Heritage</title>
+<title>RAJATANTU | Sambalpuri Handloom - Royal Thread</title>
+<meta name="description" content="Discover RAJATANTU's premium Sambalpuri handloom sarees and traditional dresses. Woven in heritage, crafted with elegance.">
 
 <style>
 :root {
-  --wine: #40151f;
+  --wine: #401018;
+  --deep-wine: #28080e;
   --gold: #c49a55;
+  --light-gold: #ead3a0;
   --cream: #fbf6ee;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -22,33 +32,29 @@ body {
 }
 
 header {
-  background: var(--wine);
-  color: white;
+  background: linear-gradient(135deg, var(--deep-wine), var(--wine));
   text-align: center;
-  padding: 25px 15px 20px;
-  border-bottom: 4px solid var(--gold);
+  padding: 20px 15px;
+  border-bottom: 3px solid var(--gold);
 }
 
-.brand {
-  font-size: clamp(30px, 7vw, 52px);
-  letter-spacing: 5px;
-  margin: 0;
-}
-
-.tag {
-  font: 11px Arial, sans-serif;
-  letter-spacing: 4px;
-  color: #e4c995;
-  margin-top: 8px;
+.logo {
+  display: block;
+  width: min(100%, 380px);
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  margin: auto;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 26px;
   flex-wrap: wrap;
-  padding: 14px;
+  padding: 15px;
   background: #fffaf3;
+  border-bottom: 1px solid #e8d7b8;
   font: 12px Arial, sans-serif;
   letter-spacing: 2px;
 }
@@ -56,6 +62,10 @@ nav {
 nav a {
   color: var(--wine);
   text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--gold);
 }
 
 .hero {
@@ -128,6 +138,12 @@ nav a {
   border: 1px solid #eadfce;
   padding: 9px;
   box-shadow: 0 4px 14px #4a25300d;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px #4a25301c;
 }
 
 .card img {
@@ -165,7 +181,7 @@ footer {
   background: var(--wine);
   color: #f5e8d3;
   text-align: center;
-  padding: 25px 15px;
+  padding: 30px 15px;
   font: 12px/1.8 Arial, sans-serif;
   letter-spacing: 1px;
 }
@@ -174,7 +190,10 @@ footer {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .card img { height: 250px; }
+
+  .card img {
+    height: 250px;
+  }
 }
 
 @media(max-width:560px) {
@@ -183,18 +202,31 @@ footer {
     gap: 10px;
     padding: 5px 10px 35px;
   }
-  .card { padding: 6px; }
-  .card img { height: 205px; }
-  .brand { letter-spacing: 3px; }
+
+  .card {
+    padding: 6px;
+  }
+
+  .card img {
+    height: 205px;
+  }
+
+  .logo {
+    max-width: 290px;
+    max-height: 200px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1 class="brand">RAJATANTU</h1>
-  <div class="tag">WOVEN IN HERITAGE</div>
+<header id="home">
+  <img
+    class="logo"
+    src="rajatantu-logo.jpg"
+    alt="Rajatantu Handloom - Sambalpuri Handloom, Royal Thread"
+  >
 </header>
 
 <nav>
@@ -203,8 +235,8 @@ footer {
   <a href="#contact">CONTACT</a>
 </nav>
 
-<section class="hero" id="home">
-  <img src="rajatantu-banner.jpg" alt="Rajatantu handloom banner">
+<section class="hero">
+  <img src="rajatantu-banner.jpg" alt="Rajatantu handloom collection banner">
 </section>
 
 <section class="intro">
@@ -225,8 +257,8 @@ footer {
 
 <footer id="contact">
   RAJATANTU<br>
-  WOVEN IN HERITAGE<br>
-  For product enquiries, please contact the store.
+  SAMBALPURI HANDLOOM - ROYAL THREAD<br>
+  WOVEN IN HERITAGE
 </footer>
 
 <script>
@@ -281,19 +313,69 @@ const sarees = [
   "IMG-20261105-WA9987.jpg"
 ];
 
+// UNIQUE PRICE FOR EVERY DRESS
+
+const dressPrices = [
+  "₹3,299",
+  "₹3,599",
+  "₹3,899",
+  "₹4,199",
+  "₹4,499",
+  "₹4,799",
+  "₹5,199",
+  "₹5,599",
+  "₹5,999",
+  "₹6,499"
+];
+
+// UNIQUE PRICE FOR EVERY SAREE
+
+const sareePrices = [
+  "₹13,999",
+  "₹15,999",
+  "₹17,999",
+  "₹18,999",
+  "₹19,999",
+  "₹21,999",
+  "₹23,999",
+  "₹24,999",
+  "₹26,999",
+  "₹28,999",
+  "₹29,999",
+  "₹31,999",
+  "₹32,999",
+  "₹34,999",
+  "₹36,999",
+  "₹38,999",
+  "₹39,999",
+  "₹41,999",
+  "₹43,999",
+  "₹45,999",
+  "₹47,999",
+  "₹49,999",
+  "₹51,999",
+  "₹53,999",
+  "₹55,999",
+  "₹57,999",
+  "₹59,999",
+  "₹62,999",
+  "₹64,999",
+  "₹67,999"
+];
+
 const products = [
   ...dresses.map((file, i) => ({
     file,
     category: "dress",
     title: `Traditional Dress ${String(i + 1).padStart(2, "0")}`,
-    price: "₹2,999 – ₹4,999"
+    price: dressPrices[i]
   })),
 
   ...sarees.map((file, i) => ({
     file,
     category: "saree",
     title: `Handloom Saree ${String(i + 1).padStart(2, "0")}`,
-    price: "₹8,999 – ₹29,999"
+    price: sareePrices[i]
   }))
 ];
 
